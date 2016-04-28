@@ -129,3 +129,38 @@ YOU  HAVE  ANY  INFORMATION
 
 
 """
+
+SAMPLE_SRT_SPANISH = u"""1
+00:00:09,209 --> 00:00:12,312
+( clock ticking - spanish )
+
+2
+00:00:14,848 --> 00:00:17,000
+MAN:
+When we think
+\u266a ...say bow, wow, \u266a
+
+3
+00:00:17,000 --> 00:00:18,752
+we have this vision of Einstein
+
+4
+00:00:18,752 --> 00:00:20,887
+as an old, wrinkly man
+with white hair.
+
+5
+00:00:20,887 --> 00:00:26,760
+MAN 2:
+E equals m c-squared is
+not about an old Einstein.
+
+6
+00:00:26,760 --> 00:00:32,200
+MAN 2:
+It's all about an eternal Einstein.
+
+7
+00:00:32,200 --> 00:00:36,200
+<LAUGHING & WHOOPS!>
+"""

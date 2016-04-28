@@ -1124,3 +1124,81 @@ DFXP_WITH_ALTERNATIVE_TIMING_FORMATS = u"""\
     </div>
 </body>
 </tt>"""
+
+# English duplicatd with spanish attribute
+SAMPLE_DFXP_MULTIPLE_LANGUAGES = """\
+<?xml version="1.0" encoding="utf-8"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/ns/ttml"
+    xmlns:tts="http://www.w3.org/ns/ttml#styling">
+ <head>
+  <styling>
+   <style xml:id="p" tts:color="#ffeedd" tts:fontFamily="Arial"
+          tts:fontSize="10pt" tts:textAlign="center"/>
+  </styling>
+  <layout>
+  <region tts:displayAlign="after" tts:textAlign="center" xml:id="bottom"></region>
+  </layout>
+ </head>
+ <body>
+  <div xml:lang="en-US" region="bottom">
+   <p begin="00:00:09.209" end="00:00:12.312" region="bottom" style="p">
+    ( clock ticking )
+   </p>
+   <p begin="00:00:14.848" end="00:00:17.000" region="bottom" style="p">
+    MAN:<br/>
+    When we think<br/>
+    \u266a ...say bow, wow, \u266a
+   </p>
+   <p begin="00:00:17.000" end="00:00:18.752" region="bottom" style="p">
+    <span tts:textalign="right">we have this vision of Einstein</span>
+   </p>
+   <p begin="00:00:18.752" end="00:00:20.887" region="bottom" style="p">
+   <br/>
+    as an old, wrinkly man<br/>
+    with white hair.
+   </p>
+   <p begin="00:00:20.887" end="00:00:26.760" region="bottom" style="p">
+    MAN 2:<br/>
+    E equals m c-squared is<br/>
+    not about an old Einstein.
+   </p>
+   <p begin="00:00:26.760" end="00:00:32.200" region="bottom" style="p">
+    MAN 2:<br/>
+    It's all about an eternal Einstein.
+   </p>
+   <p begin="00:00:32.200" end="00:00:36.200" region="bottom" style="p">
+    &lt;LAUGHING &amp; WHOOPS!&gt;
+   </p>
+  </div>
+  <div xml:lang="spa" region="bottom">
+   <p begin="00:00:09.209" end="00:00:12.312" region="bottom" style="p">
+    ( clock ticking - spanish )
+   </p>
+   <p begin="00:00:14.848" end="00:00:17.000" region="bottom" style="p">
+    MAN:<br/>
+    When we think<br/>
+    \u266a ...say bow, wow, \u266a
+   </p>
+   <p begin="00:00:17.000" end="00:00:18.752" region="bottom" style="p">
+    <span tts:textalign="right">we have this vision of Einstein</span>
+   </p>
+   <p begin="00:00:18.752" end="00:00:20.887" region="bottom" style="p">
+   <br/>
+    as an old, wrinkly man<br/>
+    with white hair.
+   </p>
+   <p begin="00:00:20.887" end="00:00:26.760" region="bottom" style="p">
+    MAN 2:<br/>
+    E equals m c-squared is<br/>
+    not about an old Einstein.
+   </p>
+   <p begin="00:00:26.760" end="00:00:32.200" region="bottom" style="p">
+    MAN 2:<br/>
+    It's all about an eternal Einstein.
+   </p>
+   <p begin="00:00:32.200" end="00:00:36.200" region="bottom" style="p">
+    &lt;LAUGHING &amp; WHOOPS!&gt;
+   </p>
+  </div>
+ </body>
+</tt>"""

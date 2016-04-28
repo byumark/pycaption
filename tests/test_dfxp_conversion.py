@@ -26,10 +26,11 @@ from .samples.dfxp import (
     SAMPLE_DFXP_OUTPUT, SAMPLE_DFXP_STYLE_TAG_WITH_NO_XML_ID_INPUT,
     SAMPLE_DFXP_STYLE_TAG_WITH_NO_XML_ID_OUTPUT,
     SAMPLE_DFXP_LONG_CUE_FIT_TO_SCREEN, SAMPLE_DFXP_FOR_LEGACY_WRITER_INPUT,
-    SAMPLE_DFXP_FOR_LEGACY_WRITER_OUTPUT, DFXP_WITH_ESCAPED_APOSTROPHE
+    SAMPLE_DFXP_FOR_LEGACY_WRITER_OUTPUT, DFXP_WITH_ESCAPED_APOSTROPHE,
+    SAMPLE_DFXP_MULTIPLE_LANGUAGES
 )
 from .samples.sami import SAMPLE_SAMI
-from .samples.srt import SAMPLE_SRT
+from .samples.srt import SAMPLE_SRT, SAMPLE_SRT_SPANISH
 from .samples.webvtt import (
     SAMPLE_WEBVTT_FROM_DFXP, SAMPLE_WEBVTT_FROM_DFXP_WITH_STYLE,
     SAMPLE_WEBVTT_FROM_DFXP_WITH_POSITIONING_AND_STYLE,
@@ -165,6 +166,12 @@ class DFXPtoSRTTestCase(unittest.TestCase, SRTTestingMixIn):
         results = SRTWriter().write(caption_set)
         self.assertTrue(isinstance(results, unicode))
         self.assertSRTEquals(SAMPLE_SRT, results)
+
+    def test_dfxp_to_srt_conversion_with_language(self):
+        caption_set = DFXPReader().read(SAMPLE_DFXP_MULTIPLE_LANGUAGES)
+        results = SRTWriter().write(caption_set, language='spa')
+        self.assertTrue(isinstance(results, unicode))
+        self.assertSRTEquals(SAMPLE_SRT_SPANISH, results)
 
 
 class DFXPtoSAMITestCase(unittest.TestCase, SAMITestingMixIn):
